@@ -10,3 +10,4 @@ sphinx
 tox
 twine
 wheel
+--editable .

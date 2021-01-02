@@ -6,6 +6,8 @@ $ python setup.py build_ext --inplace
 
 """
 
+import re
+
 from setuptools import Extension, setup
 from setuptools.command.test import test as TestCommand
 
@@ -24,7 +26,10 @@ class Tox(TestCommand):
 
 
 with open('README.rst') as reader:
-    readme = reader.read()
+    text = reader.read()
+    # reStructuredText on PyPI does not support the ".. raw:: html" syntax.
+    rst_raw_pattern = r'.. raw:: html\n\n(   .*\n)+'
+    readme = re.sub(rst_raw_pattern, '', text)
 
 args = dict(
     name=runstats.__title__,
@@ -59,7 +64,7 @@ args = dict(
 
 try:
     from Cython.Build import cythonize
-    ext_modules = [Extension('runstats.fast', ['runstats/fast.pyx'])]
+    ext_modules = [Extension('runstats.fast', ['runstats/core.py'])]
     setup(ext_modules=cythonize(ext_modules), **args)
 except Exception as exception:
     print('*' * 75)

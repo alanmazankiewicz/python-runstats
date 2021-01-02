@@ -25,6 +25,7 @@ in a single pass. Summary objects work on sequences which may be larger than
 memory or disk space permit. They may also be efficiently combined together to
 create aggregate summaries.
 
+
 Features
 --------
 
@@ -49,6 +50,15 @@ Features
 .. image:: https://ci.appveyor.com/api/projects/status/github/grantjenks/python-runstats?branch=master&svg=true
    :target: http://www.grantjenks.com/docs/runstats/
 
+
+Support
+-------
+
+.. raw:: html
+
+   <button id="fons-book">Request an Appointment</button>
+
+
 Quickstart
 ----------
 
@@ -70,6 +80,7 @@ function:
    >>> from runstats import Statistics, Regression
    >>> help(Statistics)
    >>> help(Regression)
+
 
 Tutorial
 --------
@@ -220,6 +231,7 @@ faster than the pure-Python extension.
 
 .. _`RunStats`: http://www.grantjenks.com/docs/runstats/
 
+
 Reference and Indices
 ---------------------
 
@@ -234,6 +246,7 @@ Reference and Indices
 .. _`RunStats at PyPI`: https://pypi.python.org/pypi/runstats/
 .. _`RunStats at GitHub`: https://github.com/grantjenks/python-runstats/
 .. _`RunStats Issue Tracker`: https://github.com/grantjenks/python-runstats/issues/
+
 
 License
 -------
@@ -250,3 +263,11 @@ Unless required by applicable law or agreed to in writing, software distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
 CONDITIONS OF ANY KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations under the License.
+
+
+.. raw:: html
+
+   <script src="https://fons.com/fons-widget.js"></script>
+    <script>
+       FonsWidget('grantjenks')
+   </script>
