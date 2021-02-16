@@ -1,6 +1,6 @@
 """Python RunStats
 
-Compute Statistics, Exponential Statistics and Regression in a single pass.
+Compute Statistics, Exponential Statistics and Regression in a single pass..
 
 """
 
